@@ -1,0 +1,1 @@
+Lista de exercícios sobre funções em JavaScript, criada para uma atividade na disciplina de Introdução às Tecnologias Web. 
