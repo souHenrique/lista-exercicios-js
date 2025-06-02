@@ -33,9 +33,18 @@
 .questao2 h2{
     margin-bottom: 20px;
 }
-.entrada-q2{
-    display: flex;
-}
 .valorQ2{
     width: 60px;
+}
+
+.questao3{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.questao3 h2{
+    margin-bottom: 20px;
+}
+.valorQ3{
+    width: 60px;
+    margin-right: 10px;
 }

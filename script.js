@@ -1,5 +1,6 @@
 const botaoQ1 = document.getElementById("botaoQ1");
 const botaoQ2 = document.getElementById("botaoQ2");
+const botaoQ3 = document.getElementById("botaoQ3");
 
 botaoQ1.onclick = function(){
     const q1Valor1 = document.getElementById("q1Valor1").value;
@@ -39,4 +40,23 @@ function VOGAL(c){
     else{
         document.getElementById("resultadoQ2").textContent = `O valor '${c}' NÃO é uma vogal.`
     }
+}
+
+botaoQ3.onclick = function(){
+    const q3Valor1 = document.getElementById("q3Valor1").value;
+    const q3Valor2 = document.getElementById("q3Valor2").value;
+
+    LIMITES(q3Valor1, q3Valor2);
+}
+function LIMITES(li, ls){
+    let somaPares = 0;
+    let arrayPares = [];
+    for (let i = Number(li); i <= Number(ls); i++){
+        if (i % 2 == 0){
+            arrayPares.push(Number(i));
+            somaPares += Number(i);
+        }
+    }
+    document.getElementById("resultadoNumerosQ3").textContent = `${arrayPares}`;
+    document.getElementById("resultadoSomaQ3").textContent = `A soma dos valores é ${somaPares}`;
 }
