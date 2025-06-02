@@ -9,6 +9,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .questao1{
     margin-top: 20px;
     margin-left: 10px;
@@ -22,5 +23,19 @@
 .valorQ1{
     margin-right: 10px;
     display: flex;
+    width: 60px;
+}
+
+.questao2{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.questao2 h2{
+    margin-bottom: 20px;
+}
+.entrada-q2{
+    display: flex;
+}
+.valorQ2{
     width: 60px;
 }

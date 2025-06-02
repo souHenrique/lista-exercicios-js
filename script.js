@@ -1,34 +1,42 @@
 const botaoQ1 = document.getElementById("botaoQ1");
-botaoQ1.onclick =  function(){
+const botaoQ2 = document.getElementById("botaoQ2");
+
+botaoQ1.onclick = function(){
     const q1Valor1 = document.getElementById("q1Valor1").value;
     const q1Valor2 = document.getElementById("q1Valor2").value;
     const q1Valor3 = document.getElementById("q1Valor3").value;
     const q1Valor4 = document.getElementById("q1Valor4").value;
     const q1Valor5 = document.getElementById("q1Valor5").value;
-    
-    let arrayNum = [];
-    arrayNum.push(q1Valor1);
-    arrayNum.push(q1Valor2);
-    arrayNum.push(q1Valor3);
-    arrayNum.push(q1Valor4);
-    arrayNum.push(q1Valor5);
+
+    MAIOR_MENOR(q1Valor1, q1Valor2, q1Valor3, q1Valor4, q1Valor5);
+};
+function MAIOR_MENOR(a, b, c, d, e){
+    let arrayNum = [a, b, c, d, e];
     let maior = arrayNum[0];
     let menor = arrayNum[0];
+    for (let i = 0; i < arrayNum.length; i++) {
+        if(Number(arrayNum[i]) > Number(maior)){
+            maior = Number(arrayNum[i]);
+        }
+        if(Number(arrayNum[i]) < Number(menor)){
+            menor = Number(arrayNum[i]);
+        }
+    };
+    document.getElementById("resultadoMaiorQ1").textContent = `O maior número é: ${maior}`;
+    document.getElementById("resultadoMenorQ1").textContent = `O menor número é: ${menor}`;
+}
 
-    function MAIOR_MENOR(){
-        for (let i = 0; i < arrayNum.length; i++) {
-            console.log(arrayNum[i]);
-            console.log(maior);
-            console.log(menor);
-            if(Number(arrayNum[i]) > Number(maior)){
-                maior = Number(arrayNum[i]);
-            }
-            if(Number(arrayNum[i]) < Number(menor)){
-                menor = Number(arrayNum[i]);
-            }
-        };
-        document.getElementById("resultadoMaiorQ1").textContent = `O maior número é: ${maior}`;
-        document.getElementById("resultadoMenorQ1").textContent = `O menor número é: ${menor}`;
+botaoQ2.onclick = function(){
+    const q2Valor = document.getElementById("q2Valor").value;
+
+    VOGAL(q2Valor);
+}
+function VOGAL(c){
+    let arrayVogais = ["a", "e", "i", "o", "u"];
+    if (arrayVogais.includes(c.toLowerCase())){
+        document.getElementById("resultadoQ2").textContent = `O valor '${c}' é uma vogal.`
     }
-    MAIOR_MENOR();
-};
+    else{
+        document.getElementById("resultadoQ2").textContent = `O valor '${c}' NÃO é uma vogal.`
+    }
+}
