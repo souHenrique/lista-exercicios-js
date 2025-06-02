@@ -1,6 +1,7 @@
 const botaoQ1 = document.getElementById("botaoQ1");
 const botaoQ2 = document.getElementById("botaoQ2");
 const botaoQ3 = document.getElementById("botaoQ3");
+const botaoQ4 = document.getElementById("botaoQ4");
 
 botaoQ1.onclick = function(){
     const q1Valor1 = document.getElementById("q1Valor1").value;
@@ -59,4 +60,24 @@ function LIMITES(li, ls){
     }
     document.getElementById("resultadoNumerosQ3").textContent = `${arrayPares}`;
     document.getElementById("resultadoSomaQ3").textContent = `A soma dos valores é ${somaPares}`;
+}
+
+botaoQ4.onclick = function(){
+    const q4Valor1 = Number(document.getElementById("q4Valor1").value);
+    const q4Valor2 = Number(document.getElementById("q4Valor2").value);
+    const q4Valor3 = Number(document.getElementById("q4Valor3").value);
+
+    ORDEM(q4Valor1, q4Valor2, q4Valor3);
+}
+function ORDEM(a, b, c){
+    if (!Number.isInteger(a) || !Number.isInteger(b) || !Number.isInteger(c)){
+        document.getElementById("resultadoQ4").textContent = "Por favor, digite apenas números inteiros.";
+    }
+    else{
+        let arrayOrdenado = [a, b, c];
+        arrayOrdenado.sort(function(a, b){
+            return a - b;
+        });
+        document.getElementById("resultadoQ4").textContent = `${arrayOrdenado}`;
+    }
 }
