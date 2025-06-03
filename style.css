@@ -10,77 +10,17 @@
     align-items: center;
 }
 
-.questao1{
+.questao{
     margin-top: 20px;
     margin-left: 10px;
 }
-.questao1 h2{
+.questao h2{
     margin-bottom: 20px;
 }
-.entrada-q1{
+.entrada{
     display: flex;
 }
-.valorQ1{
+.valorQ{
     margin-right: 10px;
-    display: flex;
     width: 60px;
-}
-
-.questao2{
-    margin-top: 20px;
-    margin-left: 10px;
-}
-.questao2 h2{
-    margin-bottom: 20px;
-}
-.valorQ2{
-    width: 60px;
-}
-
-.questao3{
-    margin-top: 20px;
-    margin-left: 10px;
-}
-.questao3 h2{
-    margin-bottom: 20px;
-}
-.valorQ3{
-    width: 60px;
-    margin-right: 10px;
-}
-
-.questao4{
-    margin-top: 20px;
-    margin-left: 10px;
-}
-.questao4 h2{
-    margin-bottom: 20px;
-}
-.valorQ4{
-    width: 60px;
-    margin-right: 10px;
-}
-
-.questao5{
-    margin-top: 20px;
-    margin-left: 10px;
-}
-.questao5 h2{
-    margin-bottom: 20px;
-}
-.valorQ5{
-    width: 60px;
-    margin-right: 10px;
-}
-
-.questao6{
-    margin-top: 20px;
-    margin-left: 10px;
-}
-.questao6 h2{
-    margin-bottom: 20px;
-}
-.valorQ6{
-    width: 60px;
-    margin-right: 10px;
 }
