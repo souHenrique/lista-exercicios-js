@@ -32,15 +32,20 @@ function MAIOR_MENOR(a, b, c, d, e){
 botaoQ2.onclick = function(){
     const q2Valor = document.getElementById("q2Valor").value;
 
-    VOGAL(q2Valor);
+    if (VOGAL(q2Valor) == 1){
+        document.getElementById("resultadoQ2").textContent = `O valor '${q2Valor}' é uma vogal.`
+    }
+    else{
+        document.getElementById("resultadoQ2").textContent = `O valor '${q2Valor}' NÃO é uma vogal.`
+    }
 }
 function VOGAL(c){
     let arrayVogais = ["a", "e", "i", "o", "u"];
     if (arrayVogais.includes(c.toLowerCase())){
-        document.getElementById("resultadoQ2").textContent = `O valor '${c}' é uma vogal.`
+        return 1;
     }
     else{
-        document.getElementById("resultadoQ2").textContent = `O valor '${c}' NÃO é uma vogal.`
+        return 0;
     }
 }
 

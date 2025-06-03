@@ -1,7 +1,13 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-family: 'Roboto';
 }
+footer{
+    text-align: center;
+    margin: 10px;
+}
+
 .tituloPrincipal{
     background-color: rgb(113, 187, 247);
     padding: 25px;
