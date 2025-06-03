@@ -86,17 +86,22 @@ function ORDEM(a, b, c){
 botaoQ5.onclick = function(){
     const q5Valor = Number(document.getElementById("q5Valor").value);
 
-    POSITIVO_NEGATIVO(q5Valor);
-}
-function POSITIVO_NEGATIVO(x){
-    if (!Number.isInteger(x)){
+    if (!Number.isInteger(q5Valor)){
         document.getElementById("resultadoQ5").textContent = "Por favor, digite um número inteiro.";
     }
-    else if(x >= 0){
-        document.getElementById("resultadoQ5").textContent = true;
+    else if (POSITIVO_NEGATIVO(q5Valor)){
+        document.getElementById("resultadoQ5").textContent = `O valor ${q5Valor} é POSITIVO.`;
     }
     else{
-        document.getElementById("resultadoQ5").textContent = false;
+        document.getElementById("resultadoQ5").textContent = `O valor ${q5Valor} é NEGATIVO.`;
+    }
+}
+function POSITIVO_NEGATIVO(x){
+    if(x >= 0){
+        return true;
+    }
+    else{
+        return false;
     }
 }
 
@@ -115,9 +120,9 @@ botaoQ6.onclick = function(){
 }
 function PAR_IMPAR(x){
     if(x % 2 == 0){
-        return true
+        return true;
     }
     else{
-        return false
+        return false;
     }
 }
