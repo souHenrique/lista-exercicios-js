@@ -99,3 +99,25 @@ function POSITIVO_NEGATIVO(x){
         document.getElementById("resultadoQ5").textContent = false;
     }
 }
+
+botaoQ6.onclick = function(){
+    const q6Valor = Number(document.getElementById("q6Valor"). value);
+
+    if (!Number.isInteger(q6Valor)){
+        document.getElementById("resultadoQ6").textContent = "Por favor, digite um número inteiro.";
+    }
+    else if (PAR_IMPAR(q6Valor)){
+        document.getElementById("resultadoQ6").textContent = `O valor ${q6Valor} é PAR.`;
+    }
+    else{
+        document.getElementById("resultadoQ6").textContent = `O valor ${q6Valor} é ÍMPAR.`;
+    }
+}
+function PAR_IMPAR(x){
+    if(x % 2 == 0){
+        return true
+    }
+    else{
+        return false
+    }
+}
