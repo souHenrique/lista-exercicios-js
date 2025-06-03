@@ -2,6 +2,7 @@ const botaoQ1 = document.getElementById("botaoQ1");
 const botaoQ2 = document.getElementById("botaoQ2");
 const botaoQ3 = document.getElementById("botaoQ3");
 const botaoQ4 = document.getElementById("botaoQ4");
+const botaoQ5 = document.getElementById("botaoQ5");
 
 botaoQ1.onclick = function(){
     const q1Valor1 = document.getElementById("q1Valor1").value;
@@ -79,5 +80,22 @@ function ORDEM(a, b, c){
             return a - b;
         });
         document.getElementById("resultadoQ4").textContent = `${arrayOrdenado}`;
+    }
+}
+
+botaoQ5.onclick = function(){
+    const q5Valor = Number(document.getElementById("q5Valor").value);
+
+    POSITIVO_NEGATIVO(q5Valor);
+}
+function POSITIVO_NEGATIVO(x){
+    if (!Number.isInteger(x)){
+        document.getElementById("resultadoQ5").textContent = "Por favor, digite um número inteiro.";
+    }
+    else if(x >= 0){
+        document.getElementById("resultadoQ5").textContent = true;
+    }
+    else{
+        document.getElementById("resultadoQ5").textContent = false;
     }
 }
